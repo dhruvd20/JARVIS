@@ -86,7 +86,7 @@ if __name__ == "__main__":
             speak('Facebook is open now...')
 
         elif 'play music' in statement or 'play some music' in statement:
-            music_dir = 'C:\\Users\\Dhruv doshi\\Music'
+            music_dir = input('enter the name of your music directory: ')
             songs = os.listdir(music_dir)
             print(songs)    
             os.startfile(os.path.join(music_dir, songs[0]))
@@ -122,9 +122,7 @@ if __name__ == "__main__":
         elif "who made you" in statement or "who created you" in statement or "who discovered you" in statement:
             speak("I was built by Dhruv")
             print("I was built by Dhruv")
-        
-
-
-        
-
-
+           
+        else:
+            speak('STILL IN CONTRUCTION...')
+    
