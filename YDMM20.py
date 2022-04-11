@@ -85,6 +85,8 @@ if __name__ == "__main__":
            query = query.replace("youtube search","")
            web = 'https:/www.youtube.com/results?search_query=' + query
            webbrowser.open(web)
+      
+
 
         elif 'Google search' in query or 'google' in query:
             speak("this is what i have found according to google")
@@ -117,13 +119,6 @@ if __name__ == "__main__":
             speak("Doing that right now")
             webbrowser.open("https://web.whatsapp.com/")
 
-        elif 'take a screenshot' in query or 'screenshot' in query:
-            speak("please tell me what to name it ")
-            name = takeCommand()
-            ScreenShot = pyautogui.screenshot()
-            ScreenShot.save("C://Users//kiran//OneDrive//Desktop//CoDe//"+name+".png")
-            speak("done.. ")
-
         elif 'hello Jarvis' in query or 'hi' in query or 'hello' in query or 'hai' in query:
             speak("Hi sir, how are you")
             fine_or_not = takeCommand()
@@ -150,8 +145,6 @@ if __name__ == "__main__":
             speak("Goodbye sir")
             break
 
-        elif 'close the web browser' in query or 'close brave' in query or 'close chrome' in query:
-            os.system("taskkill /im brave.exe /f") or os.system("taskkill /im chrome.exe /f")
 
         elif 'find the ' in query:
             speak("did not quite get that")
